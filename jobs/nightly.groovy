@@ -2,6 +2,7 @@ pipelineJob("pipeline-seed-nightly-build"){
 	definition {
 		cps{
 			script(readFileFromWorkspace('pipeline/Jenkinsfile-nightly'))
+			sandbox()
 		}
 					
 		
