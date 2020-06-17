@@ -1,6 +1,6 @@
 #!groovy
 node() {
-	  checkout scm
+	  
       jobDsl ignoreExisting: true,
              lookupStrategy: 'SEED_JOB',
              targets: ['jobs/release.groovy',
