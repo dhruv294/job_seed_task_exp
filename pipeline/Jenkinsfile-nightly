@@ -23,4 +23,9 @@ pipeline{
 				}
 			}
 		}
+	post{
+		always{
+			emailext body: 'A Build Test EMail', recipientProviders: [[$class:'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Nightly Build'
+		}
+	}
 }
