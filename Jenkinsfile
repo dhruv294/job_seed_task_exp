@@ -1,9 +1,10 @@
 #!groovy
-properties([
-  pipelineTriggers([cron('H/5 * * * *')])
-])
+
 node() {
-		
+	properties([
+			pipelineTriggers([cron('H/5 * * * *')])
+	])
+
 		checkout scm
 
 		jobDsl ignoreExisting: true,
