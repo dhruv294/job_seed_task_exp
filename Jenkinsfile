@@ -1,6 +1,7 @@
 #!groovy
+properties([cron('H/5 * * * *')])
 node() {
-	properties([cron('H/5 * * * *')])	
+		
 		checkout scm
 
 		jobDsl ignoreExisting: true,
